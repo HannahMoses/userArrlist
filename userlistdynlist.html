@@ -1,0 +1,51 @@
+<!-- 2:20 PM 7/31/2017 -->
+<!DOCTYPE html>
+<html>
+<head lang=en>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="userlisttemplates/userliststyling/userliststyle2.css">
+<script>
+ var list =[];
+ function AddItemToExistingList(){
+     var NoOfItems= list.length;
+     list[NoOfItems] = document.getElementById("txtValue").value;
+     DisplayResults();
+ }
+function DisplayResults(){
+    var n = list.length;
+    document.getElementById("ItemsCount").innerHTML=n;
+    //"Number of items added : "+ n.toString() +list[n-1];
+   var storedlist = Array.from(list);
+   document.getElementById("ItemsList").innerHTML = storedlist;
+}
+//document.getElementById("ItemsList").innerHTML = storedlist;
+
+</script>
+     </head>
+<body>
+    <div id="slist" >My Shopping list.</div><br>
+    <p2 id="mylist"></p2>
+        <p1 id="addmedarr"></p1><br>
+    <p1 id="verticalist"></p1>
+<table>
+<tr>
+
+    <td style="font-size:180%; color:pink">
+        Enter an item and press 'Add ' :
+    </td>
+<td>
+    <input id="txtValue" type="text" />
+</td>
+</tr>
+<tr>
+    <td>
+    </td>
+    <td>
+        <input class ="button" id="btnAdd" type="button" value="Add " onclick="AddItemToExistingList()"/>
+    </td>
+</tr>
+</table>
+ <div id="ItemsCount"></div><!-- adds items dynamically here whenever user clicks on ADD button -->
+<div id="ItemsList"><div>
+</body>
+</html>

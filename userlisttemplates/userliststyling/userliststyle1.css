@@ -1,0 +1,42 @@
+head {  text-align:left;
+	color:rgb(110,12,13);
+     }
+body {	color:rgb(198,12,10);
+        background-color:rgb(117, 151, 206);
+	    font-family:"Verdana";
+     }
+h1   {  text-align:center;
+	    color:#ba0544;
+     }
+h2   {  color:rgb(8, 12, 48);
+        background-color:rgb(240,200,255)
+        text-align :center;
+     }
+	 a{
+	 	text-align:center;
+		color:rgb(8,12,48);
+	 }
+p    { text-align:center;
+       font-size :30px;
+	   font-weight:bold;
+	   color:rgb(8, 12, 48);
+     }
+p1{ text-align:left;
+	color:#000172;
+}
+p2{
+	text-align: right;
+	color:rgb(8, 12, 48);
+}
+div {
+    border: 2px solid black;
+    height:328px;
+    width: 598px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    margin-right: 1500px;
+    margin-left: 360px;
+    background-color:#ba0544;
+    padding : 12px 15px 12px 15px;
+
+}

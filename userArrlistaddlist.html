@@ -1,0 +1,79 @@
+<!-- 5:27 PM 7/19/2017 -->
+
+<! DOCTYPE html>
+<html>
+<head>
+	<title> My userlistaddlist 2017Jul31 Mon</title>
+	<link rel="stylesheet" href="userlisttemplates/userliststyling/userliststyle2.css">
+	<meta charset="UTF-8">
+	<!--<link rel="stylesheet" href="userlisttemplates/userliststyling/userliststyle2.css">-->
+	<script>
+	 var list =[];
+	 function AddItemToExistingList(){
+	     var NoOfItems= list.length;
+	     list[NoOfItems] = document.getElementById("txtValue").value;
+	     DisplayResults();
+	 }
+	function DisplayResults(){
+	    var n = list.length;
+	    document.getElementById("ItemsCount").innerHTML="Number of items added : "+ n.toString();
+	    var ItemsListDiv = document.getElementById("ItemsList");
+	//To remove all items in <div> ItemsList and create a fresh list
+	    while (ItemsListDiv.hasChildNodes()){
+	        ItemsListDiv.removeChild(ItemsListDiv.lastChild);
+	    }
+
+	    for (var i=0; i<n; i++) {
+	        var NewDiv = document.createElement("div");
+	        //To say item 2 of 4 etc..
+	        NewDiv.innerHTML = "Item "+(i+1).toString() + " of "+ n.toString() +
+	        " is " + list(i);
+	        //To add NewDIv to ItemsListDiv
+	        ItemsListDiv.appendChild(NewDiv);
+	    }
+	}
+
+	</script>
+</head>
+<body>
+	<table>
+	<tr>
+	    <td>
+	        Enter any value :
+	    </td>
+	    </td>
+	        <input id="txtValue" type="text" />
+	    </td>
+	</tr>
+	<tr>
+	    <td>
+	    </td>
+	    <td>
+	        <input class ="button" id="btnAdd" type="button" value="Add to List" onclick="AddItemToExistingList()"/>
+	    </td>
+	</tr>
+	</table>
+
+	   <div id="ItemsCount"></div><!-- adds items dynamically here whenever user clicks on ADD button -->
+
+	<div id="ItemsList"><div>	
+<!--<p id="displayusername">users</p><br>
+<p1 id="displaymarray">marray</p1><br>
+<p1 id= "displaylist">list</p1><br>
+<p id="onlylist"> LIST OF ITEMS ONLY </p>
+      <script>
+    var alluserinfo = ["user","email","list"];
+    var username = ["Moses","Hannah","Angela","Alice"];
+    var useremail = ["m@hotmail.com "];
+    var userlist = ["*","Tylenol","Ibuprofen"];
+    var marray = new Array();
+    marray[0] = username;
+    marray[1] = useremail;
+    marray[2] = userlist ;
+    document.getElementById("displayusername").innerHTML = username;
+    document.getElementById("displaymarray").innerHTML = marray;
+    document.getElementById("displaylist").innerHTML = username;
+    document.getElementById("onlylist").innerHTML =marray[0];
+    </script>-->
+  </body>
+</html>
