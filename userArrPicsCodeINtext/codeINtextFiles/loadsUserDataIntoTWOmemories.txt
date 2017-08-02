@@ -1,0 +1,182 @@
+
+****************
+<!-- 2:46 PM 8/2/2017 Accesses array outside of DisplayResult()Function-->
+<!-- 2:20 PM 7/31/2017 code edited on 2:38 PM 8/2/2017 -->
+<!DOCTYPE html>
+<html>
+<head lang=en>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="userlisttemplates/userliststyling/userliststyle2.css">
+<script>
+ var list =[];
+  var olditem=["*"];
+ var alllist = Array.from (list);
+ function AddItemToExistingList(){
+     var NoOfItems= list.length;
+     list[NoOfItems] = document.getElementById("txtValue").value;
+     DisplayResults();
+ }
+function DisplayResults(){
+    var n = list.length;
+    document.getElementById("ItemsCount").innerHTML="Num of items added : "+ n.toString();
+    document.getElementById("Items").innerHTML="item added : "+ list[n-1];
+        var oldit= list[n-1];
+//allmyitems[] = ["*"];
+//    allmyitems.unshift(n);
+//    document.getElementById("allitems").innerHTML = ("item just added = "+oldit);
+var ele = document.getElementById("allitems");
+ele .innerHTML = olditem;
+    var ItemsListDiv = document.getElementById("ItemsList");
+//To remove all items in <div> ItemsList and create a fresh list
+    while (ItemsListDiv.hasChildNodes()){
+        ItemsListDiv.removeChild(ItemsListDiv.lastChild);
+    }
+
+    for (var i=0; i<n; i++) {
+        var NewDiv = document.createElement("div");
+        //To say item 2 of 4 etc..
+        NewDiv.innerHTML = "Item "+(i+1).toString() + " of "+ n.toString() +
+        " is " + list(i);
+        //To add NewDIv to ItemsListDiv
+        ItemsListDiv.appendChild(NewDiv);
+    }//return list[];
+}
+
+</script>
+     </head>
+<body>
+<table>
+<tr>
+    <td style="font-size:40px;color:pink">
+        Enter any value :
+    </td>
+    <td>
+        <input id="txtValue"  type="text" />
+    </td>
+</tr>
+<tr>
+    <td>
+    </td>
+    <td>
+        <input class ="button" id="btnAdd" type="button" value="Add to List" onclick="AddItemToExistingList()"/>
+    </td>
+</tr>
+</table>
+
+   <div id="ItemsCount"></div><!-- adds items dynamically here whenever user clicks on ADD button -->
+<div id="Items"></div>
+<div id="allitems">All items</div>
+<div id="ItemsList"></div>
+<script>document.getElementById("allitems").innerHTML= alllist;</script>
+</body>
+</html>
+
+
+<!--*********************************
+<p id="staticarray"> My  array</p>
+<script>
+ var myitems = new Array();
+ myitems[0] = "1";
+ myitems[1] = "2";
+ document.getElementById("staticarray").innerHTML=myitems;
+ function ArrayTest(){
+     var ar = new Array();
+     ar[0] = "3";
+     ar[1] = "4";
+     var ele = parseInt(prompt("Enter a num"));
+     document.write(ar[ele]);
+     }
+ArrayTest ();
+    </script>-->
+
+
+
+******************
+<!-- 2:22 PM 8/2/2017 -->
+<!-- 2:20 PM 7/31/2017 code edited on 2:38 PM 8/2/2017 -->
+<!DOCTYPE html>
+<html>
+<head lang=en>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="userlisttemplates/userliststyling/userliststyle2.css">
+<script>
+ var list =[];
+ var alllist = Array.from (list);
+ function storeitems(){
+     var t = list[n-1];
+ }
+ function AddItemToExistingList(){
+     var NoOfItems= list.length;
+     list[NoOfItems] = document.getElementById("txtValue").value;
+     DisplayResults();
+ }
+function DisplayResults(){
+    var n = list.length;
+    document.getElementById("ItemsCount").innerHTML="Num of items added : "+ n.toString();
+    document.getElementById("Items").innerHTML="item added : "+ list[n-1];
+        var oldit= list[n-1];
+//allmyitems[] = ["*"];
+//    allmyitems.unshift(n);
+    document.getElementById("allitems").innerHTML = ("item just added = "+oldit);
+    var ItemsListDiv = document.getElementById("ItemsList");
+//To remove all items in <div> ItemsList and create a fresh list
+    while (ItemsListDiv.hasChildNodes()){
+        ItemsListDiv.removeChild(ItemsListDiv.lastChild);
+    }
+
+    for (var i=0; i<n; i++) {
+        var NewDiv = document.createElement("div");
+        //To say item 2 of 4 etc..
+        NewDiv.innerHTML = "Item "+(i+1).toString() + " of "+ n.toString() +
+        " is " + list(i);
+        //To add NewDIv to ItemsListDiv
+        ItemsListDiv.appendChild(NewDiv);
+    }//return list[];
+}
+
+</script>
+     </head>
+<body>
+<table>
+<tr>
+    <td style="font-size:40px;color:pink">
+        Enter any value :
+    </td>
+    <td>
+        <input id="txtValue"  type="text" />
+    </td>
+</tr>
+<tr>
+    <td>
+    </td>
+    <td>
+        <input class ="button" id="btnAdd" type="button" value="Add to List" onclick="AddItemToExistingList()"/>
+    </td>
+</tr>
+</table>
+
+   <div id="ItemsCount"></div><!-- adds items dynamically here whenever user clicks on ADD button -->
+<div id="Items"></div>
+<div id="allitems">All items</div>
+<div id="ItemsList"></div>
+<script>document.getElementById("allitems").innerHTML= alllist;</script>
+</body>
+</html>
+
+
+<!--*********************************
+<p id="staticarray"> My  array</p>
+<script>
+ var myitems = new Array();
+ myitems[0] = "1";
+ myitems[1] = "2";
+ document.getElementById("staticarray").innerHTML=myitems;
+ function ArrayTest(){
+     var ar = new Array();
+     ar[0] = "3";
+     ar[1] = "4";
+     var ele = parseInt(prompt("Enter a num"));
+     document.write(ar[ele]);
+     }
+ArrayTest ();
+    </script>-->
